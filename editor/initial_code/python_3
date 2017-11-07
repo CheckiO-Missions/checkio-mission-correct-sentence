@@ -1,0 +1,19 @@
+def correct_sentence(text: str) -> str:
+    """
+        returns a corrected sentence which starts with capital letter
+        and ends with dot.
+    """
+    # your code here
+    return text
+
+
+if __name__ == '__main__':
+    print("Example:")
+    print(correct_sentence("greetings, friends"))
+    
+    # These "asserts" using for self-checking and not for auto-testing
+    assert correct_sentence("greetings, friends") == "Greetings, friends."
+    assert correct_sentence("Greetings, friends") == "Greetings, friends."
+    assert correct_sentence("Greetings, friends.") == "Greetings, friends."
+    assert correct_sentence("hi") == "Hi."
+    print("Coding complete? Click 'Check' to earn cool rewards!")

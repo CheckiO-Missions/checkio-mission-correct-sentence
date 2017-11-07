@@ -1,0 +1,39 @@
+<!-- Describe task in general -->
+
+<p>
+    <i>English Descriptin is not ready yet. Please choose Russian Translation if it helps</i>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input: </strong> String.
+</p>
+
+<p>
+    <strong>Output: </strong> String.
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">correctSentence("greetings, friends") == "Greetings, friends."
+correctSentence("Greetings, friends") == "Greetings, friends."
+correctSentence("Greetings, friends.") == "Greetings, friends."
+</pre>
+{% else %}
+<pre class="brush: python">correct_sentence("greetings, friends") == "Greetings, friends."
+correct_sentence("Greetings, friends") == "Greetings, friends."
+correct_sentence("Greetings, friends.") == "Greetings, friends."
+</pre>
+{% endif %}
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<p>
+    <strong>Precondition:</strong>
+    <i>no leading and trailing spaces, text contains only spaces, a-z A-Z , and .</i>
+</p>
