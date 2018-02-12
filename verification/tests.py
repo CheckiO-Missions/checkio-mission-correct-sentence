@@ -27,6 +27,10 @@ TESTS = {
         {
             "input": "hi",
             "answer": "Hi."
+        },
+        {
+            "input": "welcome to New York",
+            "answer": "Welcome to New York."
         }
     ]
 }
