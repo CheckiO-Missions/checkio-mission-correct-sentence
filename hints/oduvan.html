@@ -1,0 +1,64 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        How can I start here?
+    </div>
+    <div class="answer">
+        Function <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.capitalize">str.capitalize</a></b> return a copy of the string with its first character capitalized and the rest lowercased. 
+<br />
+This can be a good start for you.
+
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        How can I use it?
+    </div>
+    <div class="answer">
+
+        <pre class="brush: python">text = text.capitalize()</pre>
+
+It should works, try it.
+
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        But it still doesn’t solve the mission. What should I do next?
+    </div>
+    <div class="answer">
+        The next step for you is to check if the given string ends with dot. You can use function  <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith</a>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        How can I do it?
+    </div>
+    <div class="answer">
+<pre class="brush: python">If not text.endswith('.'):
+    text += '.'</pre>
+
+This expression checks if text in variable text doesn’t end with dot then add dot in the end
+
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Can you help me to put all of this together in one solution?
+    </div>
+    <div class="answer">
+        Don’t forget. Your goal on CheckiO is to create a function.
+
+<pre class="brush: python">def correct_sentence(text: str) -> str:
+    text = text.capitalize()
+    if not text.endswith('.'):
+        text += '.'
+    
+    return text</pre>
+
+
+    </div>
+</div>
+
+
+</body>
