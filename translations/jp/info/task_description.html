@@ -1,0 +1,41 @@
+<!-- Describe task in general -->
+
+<p>
+    関数の入力にはひとつの文が与えられます。常に大文字から始まりピリオドで終わるように修正し、そのコピーを返してください。
+</p>
+
+<p><i>常に修正が必要となるわけではありません。文が既にピリオドで終わっているのにさらにピリオドを付け加えるのは誤りです。</i></p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>入力: </strong> 文字列
+</p>
+
+<p>
+    <strong>出力: </strong> 文字列
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>例:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">correctSentence("greetings, friends") == "Greetings, friends."
+correctSentence("Greetings, friends") == "Greetings, friends."
+correctSentence("Greetings, friends.") == "Greetings, friends."
+</pre>
+{% else %}
+<pre class="brush: python">correct_sentence("greetings, friends") == "Greetings, friends."
+correct_sentence("Greetings, friends") == "Greetings, friends."
+correct_sentence("Greetings, friends.") == "Greetings, friends."
+</pre>
+{% endif %}
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<p>
+    <strong>事前条件:</strong>
+    <i>テキストの先頭と末尾に空白はありません。テキスト中には、a-z A-Z , .のみが含まれます。</i>
+</p>
