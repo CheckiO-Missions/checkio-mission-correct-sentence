@@ -4,7 +4,7 @@
         How can I start here?
     </div>
     <div class="answer">
-        Function <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.capitalize">str.capitalize</a></b> return a copy of the string with its first character capitalized and the rest lowercased. 
+        Function <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper</a></b> return a copy of the string with all the cased characters [4] converted to uppercase. We need to convert only first char, and in order to get the first char we should use text[0]
 <br />
 This can be a good start for you.
 
@@ -16,7 +16,7 @@ This can be a good start for you.
     </div>
     <div class="answer">
 
-        <pre class="brush: python">text = text.capitalize()</pre>
+        <pre class="brush: python">text = text[0].upper() + text[1:]</pre>
 
 It should works, try it.
 
@@ -50,7 +50,7 @@ This expression checks if text in variable text doesn’t end with dot then add 
         Don’t forget. Your goal on CheckiO is to create a function.
 
 <pre class="brush: python">def correct_sentence(text: str) -> str:
-    text = text.capitalize()
+    text = text[0].upper() + text[1:]
     if not text.endswith('.'):
         text += '.'
     
