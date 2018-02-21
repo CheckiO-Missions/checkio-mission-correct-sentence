@@ -4,7 +4,7 @@
         How can I start here?
     </div>
     <div class="answer">
-        Function <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper</a></b> return a copy of the string with all the cased characters [4] converted to uppercase. We need to convert only first char, and in order to get the first char we should use text[0]
+        A function <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper</a></b> returns a copy of the string with all of the cased characters [4] converted to the uppercase. We need to convert only the first char, and in order to get it we should use text[0]
 <br />
 This can be a good start for you.
 
@@ -18,7 +18,7 @@ This can be a good start for you.
 
         <pre class="brush: python">text = text[0].upper() + text[1:]</pre>
 
-It should works, try it.
+This should work, try it out.
 
     </div>
 </div>
@@ -27,7 +27,7 @@ It should works, try it.
         But it still doesn’t solve the mission. What should I do next?
     </div>
     <div class="answer">
-        The next step for you is to check if the given string ends with dot. You can use function  <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith</a>
+        The next step for you is to check if the given string ends with a dot. You can use a function <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith</a>
     </div>
 </div>
 <div class="question-answer">
@@ -38,16 +38,16 @@ It should works, try it.
 <pre class="brush: python">If not text.endswith('.'):
     text += '.'</pre>
 
-This expression checks if text in variable text doesn’t end with dot then add dot in the end
-
+This expression checks whether the text in a variable text ends with a dot, and if it doesn’t then add a dot at the end.
+        
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Can you help me to put all of this together in one solution?
+        Can you help me to put it all together in one solution?
     </div>
     <div class="answer">
-        Don’t forget. Your goal on CheckiO is to create a function.
+        Do not forget that your goal on CheckiO is to create a function.
 
 <pre class="brush: python">def correct_sentence(text: str) -> str:
     text = text[0].upper() + text[1:]
