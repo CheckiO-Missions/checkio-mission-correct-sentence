@@ -18,5 +18,7 @@ if (!global.is_checking) {
     assert.equal(correctSentence("Greetings, friends"), "Greetings, friends.")
     assert.equal(correctSentence("Greetings, friends."), "Greetings, friends.")
     assert.equal(correctSentence("hi"), "Hi.")
+    assert.equal(correctSentence("welcome to New York"), "Welcome to New York.")
+    
     console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }
