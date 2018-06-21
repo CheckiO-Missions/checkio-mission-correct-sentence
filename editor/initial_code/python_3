@@ -16,4 +16,6 @@ if __name__ == '__main__':
     assert correct_sentence("Greetings, friends") == "Greetings, friends."
     assert correct_sentence("Greetings, friends.") == "Greetings, friends."
     assert correct_sentence("hi") == "Hi."
+    assert correct_sentence("welcome to New York") == "Welcome to New York."
+    
     print("Coding complete? Click 'Check' to earn cool rewards!")
