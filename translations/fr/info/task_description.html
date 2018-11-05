@@ -1,0 +1,41 @@
+<!-- Describe task in general -->
+
+<p>
+    En entrée de votre function est donnée une phrase. Vous devez retourner une copie qui commence toujours par une majuscule et finit par un point.
+</p>
+
+<p><i>Faites attention au fait que toutes les corrections n'ont pas nécessairement besoin d'être faites. Si une phrase finit déjà par un point alors en ajouter un autre serait une erreur.</i></p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Entrée : </strong> Une chaîne de caractères (string).
+</p>
+
+<p>
+    <strong>Sortie : </strong> Une chaîne de caractères (string).
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Exemples :</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">correctSentence("greetings, friends") == "Greetings, friends."
+correctSentence("Greetings, friends") == "Greetings, friends."
+correctSentence("Greetings, friends.") == "Greetings, friends."
+</pre>
+{% else %}
+<pre class="brush: python">correct_sentence("greetings, friends") == "Greetings, friends."
+correct_sentence("Greetings, friends") == "Greetings, friends."
+correct_sentence("Greetings, friends.") == "Greetings, friends."
+</pre>
+{% endif %}
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<p>
+    <strong>Precondition:</strong>
+    <i>Aucun espace en début ou fin de ligne, le texte ne contient que des espaces, des lettres (a-z A-Z), virgules et points.</i>
+</p>
