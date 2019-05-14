@@ -1,0 +1,43 @@
+<!-- Describe task in general -->
+
+<p>
+    Na wejściu Twojej funkcji otrzymasz jedno zdanie. Musisz zwrócić jego poprawną wersję, która rozpoczyna się wielką
+    literą i kończy kropką.
+</p>
+
+<p><i>Zwróć uwagę na fakt, że nie wszystkie poprawki są konieczne. Jeśli zdanie kończy się już kropką to dodanie
+        kolejnej będzie traktowane jako błąd.</i></p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Wejście: </strong> string.
+</p>
+
+<p>
+    <strong>Wyjście: </strong> string.
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Przykład:</strong>
+    </p>
+
+    {% if interpreter.slug == "js-node" %}
+    <pre class="brush: javascript">correctSentence("greetings, friends") == "Greetings, friends."
+correctSentence("Greetings, friends") == "Greetings, friends."
+correctSentence("Greetings, friends.") == "Greetings, friends."
+</pre>
+    {% else %}
+    <pre class="brush: python">correct_sentence("greetings, friends") == "Greetings, friends."
+correct_sentence("Greetings, friends") == "Greetings, friends."
+correct_sentence("Greetings, friends.") == "Greetings, friends."
+</pre>
+    {% endif %}
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<p>
+    <strong>Warunek wstępny:</strong>
+    <i>Brak początkowych i końcowych spacji, tekst zawiera tlko spacje, litery a-z A-Z oraz kropkę.</i>
+</p>
