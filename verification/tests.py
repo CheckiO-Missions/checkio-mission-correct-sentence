@@ -21,6 +21,10 @@ TESTS = {
         {
             "input": "Greetings, friends.",
             "answer": "Greetings, friends."
+        },
+        {
+            "input": "greetings, friends.",
+            "answer": "Greetings, friends."
         }
     ],
     "Extra": [
