@@ -1,0 +1,64 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        Od czego zacząć?
+    </div>
+    <div class="answer">
+        Funkcja <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper</a></b> zwraca kopię stringa z wszystkimi znakami zamienionymi na wielkie litery. W tym zadaniu wystarczy przekonwertować tylko pierwszy znak, który można uzyskać za pomocą text[0].
+<br />
+To powinien być dobry punkt startowy.
+
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        W jaki sposób mam tego użyć?
+    </div>
+    <div class="answer">
+
+        <pre class="brush: python">text = text[0].upper() + text[1:]</pre>
+
+To powinno zadziałać, spróbuj.
+
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ale to wciąż nie koniec rozwiązania. Co mam teraz zrobić?
+    </div>
+    <div class="answer">
+        Następnym krokiem jest sprawdzenie czy string kończy się kropką. Możesz użyć funkcji <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith</a>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        W jaki sposób mam to zrobić?
+    </div>
+    <div class="answer">
+<pre class="brush: python">if not text.endswith('.'):
+    text += '.'</pre>
+
+To wyrażenie sprawdza czy tekst kończy się kropką, a jeśli tak nie jest - dodaje kropkę na końcu.
+        
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Możesz pomóc mi połączyć to wszystko?
+    </div>
+    <div class="answer">
+        Nie zapominaj, że twoim celem na CheckiO jest stworzenie funkcji.
+
+<pre class="brush: python">def correct_sentence(text: str) -> str:
+    text = text[0].upper() + text[1:]
+    if not text.endswith('.'):
+        text += '.'
+    
+    return text</pre>
+
+
+    </div>
+</div>
+
+
+</body>
