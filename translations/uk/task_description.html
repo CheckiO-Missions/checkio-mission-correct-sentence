@@ -1,0 +1,41 @@
+<!-- Describe task in general -->
+
+<p>
+    На вхід до твоєї функції буде передано одне речення. Потрібно повернути його виправлену версію, що починається завжди з головної буки і завершується крапкою. 
+</p>
+
+<p><i>Зверни увагу на те, що не всі виправлення необхідні. Якщо речення вже закінчується крапкою, то додавати ще одну не потрібно, це буде помилка.</i></p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Вхідні дані: </strong> Рядок (A string).
+</p>
+
+<p>
+    <strong>Вихдні дані: </strong> Рядок (A string).
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Приклад:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">correctSentence("greetings, friends") == "Greetings, friends."
+correctSentence("Greetings, friends") == "Greetings, friends."
+correctSentence("Greetings, friends.") == "Greetings, friends."
+</pre>
+{% else %}
+<pre class="brush: python">correct_sentence("greetings, friends") == "Greetings, friends."
+correct_sentence("Greetings, friends") == "Greetings, friends."
+correct_sentence("Greetings, friends.") == "Greetings, friends."
+</pre>
+{% endif %}
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<p>
+    <strong>Передумова:</strong>
+    <i>Без пробілів на початку та в кінці, текст містить лише пробіли, a–z A–Z та .</i>
+</p>
