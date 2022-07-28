@@ -29,12 +29,12 @@ TESTS = {
     ],
     "Extra": [
         {
-            "input": ["hello"],
-            "answer": ["Hello."]
+            "input": ["hi"],
+            "answer": "Hi."
         },
         {
             "input": ["welcome to New York"],
-            "answer": ["Welcome to New York."]
+            "answer": "Welcome to New York."
         }
     ]
 }
