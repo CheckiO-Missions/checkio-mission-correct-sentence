@@ -29,8 +29,8 @@ TESTS = {
     ],
     "Extra": [
         {
-            "input": ["hi"],
-            "answer": ["Hi."]
+            "input": ["hello"],
+            "answer": ["Hello."]
         },
         {
             "input": ["welcome to New York"],
