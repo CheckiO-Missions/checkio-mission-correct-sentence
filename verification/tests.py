@@ -12,19 +12,19 @@ TESTS = {
     "Basics": [
         {
             "input": ["greetings, friends"],
-            "answer": ["Greetings, friends."]
+            "answer": "Greetings, friends."
         },
         {
             "input": ["Greetings, friends"],
-            "answer": ["Greetings, friends."]
+            "answer": "Greetings, friends."
         },
         {
             "input": ["Greetings, friends."],
-            "answer": ["Greetings, friends."]
+            "answer": "Greetings, friends."
         },
         {
             "input": ["greetings, friends."],
-            "answer": ["Greetings, friends."]
+            "answer": "Greetings, friends."
         }
     ],
     "Extra": [
