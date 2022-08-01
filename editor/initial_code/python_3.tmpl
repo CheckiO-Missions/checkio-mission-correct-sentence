@@ -1,0 +1,27 @@
+{% comment %}New initial code template{% endcomment %}
+{% block env %}{% endblock env %}
+
+{% block start %}
+def correct_sentence(text: str) -> str:
+    """
+        returns a corrected sentence which starts with a capital letter
+        and ends with a dot.
+    """
+    # your code here
+    return text
+{% endblock start %}
+
+{% block example %}
+print('Example:')
+print(correct_sentence("greetings, friends"))
+{% endblock %}
+
+{% block tests %}
+{% for t in tests %}
+assert {% block call %}correct_sentence({{t.input|p_args}})
+{% endblock %} == {% block result %}{{t.answer|p}}{% endblock %}{% endfor %}
+{% endblock %}
+
+{% block final %}
+print("The mission is done! Click 'Check Solution' to earn rewards!")
+{% endblock final %}

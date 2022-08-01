@@ -1,0 +1,64 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        З чого мені розпочати вирішувати цю місію?
+    </div>
+    <div class="answer">
+        Ця функція <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper()</a></b> повертає копію рядка в якому всі літери нижнього регістру переведенні у верхній регістр. Нам потрібно перетворити лише перший символ, і щоб отримати його, ми повинні використовувати text[0]
+<br />
+Це може бути хорошим початком для тебе.
+
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Як мені цей код використати?
+    </div>
+    <div class="answer">
+
+        <pre class="brush: python">text = text[0].upper() + text[1:]</pre>
+
+Це має працювати як треба, спробуй.
+
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я все ще не можу вирішити цю місію... Що мені протрібно зробити далі?
+    </div>
+    <div class="answer">
+        Наступним кроком для тебе буде перевірка на те, чи закінчується рядок крапкою. Ти можеш використати функцію <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith()</a>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Як мені це зробити?
+    </div>
+    <div class="answer">
+<pre class="brush: python">If not text.endswith('.'):
+    text += '.'</pre>
+
+Цей вираз перевіряє, чи закінчується текст у змінній "text" крапкою, і якщо ні, додає крапку в кінці.
+
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Допоможи мені об'єднати це все в одне рішення!
+    </div>
+    <div class="answer">
+        Не забувай, що твоя мета на CheckiO — створити функцію.
+
+<pre class="brush: python">def correct_sentence(text: str) -> str:
+    text = text[0].upper() + text[1:]
+    if not text.endswith('.'):
+        text += '.'
+
+    return text</pre>
+
+
+    </div>
+</div>
+
+
+</body>

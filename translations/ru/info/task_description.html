@@ -22,17 +22,7 @@
         <strong>Пример:</strong>
     </p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">correctSentence("greetings, friends") == "Greetings, friends."
-correctSentence("Greetings, friends") == "Greetings, friends."
-correctSentence("Greetings, friends.") == "Greetings, friends."
-</pre>
-{% else %}
-<pre class="brush: python">correct_sentence("greetings, friends") == "Greetings, friends."
-correct_sentence("Greetings, friends") == "Greetings, friends."
-correct_sentence("Greetings, friends.") == "Greetings, friends."
-</pre>
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 <!-- Here you can explain how it can be used in development and what is usage of this. -->
 <p>
