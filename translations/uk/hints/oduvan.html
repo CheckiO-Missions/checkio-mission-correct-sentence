@@ -4,21 +4,21 @@
         З чого мені розпочати вирішувати цю місію?
     </div>
     <div class="answer">
-        Ця функція <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper()</a></b> повертає копію рядка в якому всі літери нижнього регістру переведенні у верхній регістр. Нам потрібно перетворити лише перший символ, і щоб отримати його, ми повинні використовувати text[0]
-<br />
-Це може бути хорошим початком для тебе.
-
+        Ідея місії в тому, що тобі потрібно зробити першу літеру рядку великою. А далі перевірити чи в кінці твого речення є крапка.
+        Якщо є, то твій рядок можна повертати як результат функції. Якщо крапки немає - тоді додай її, та поверни те що в тебе вийшло.
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Як мені цей код використати?
+        Що мені робити далі?
     </div>
     <div class="answer">
-
+        Ця функція <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper()</a></b>
+        повертає копію рядка в якому всі літери нижнього регістру переведенні у верхній регістр. Нам потрібно
+        перетворити лише перший символ, і щоб отримати його, ми повинні використовувати text[0].
         <pre class="brush: python">text = text[0].upper() + text[1:]</pre>
-
-Це має працювати як треба, спробуй.
+<br />
+Це може бути хорошим початком для тебе.
 
     </div>
 </div>
@@ -27,19 +27,12 @@
         Я все ще не можу вирішити цю місію... Що мені протрібно зробити далі?
     </div>
     <div class="answer">
-        Наступним кроком для тебе буде перевірка на те, чи закінчується рядок крапкою. Ти можеш використати функцію <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith()</a>
-    </div>
-</div>
-<div class="question-answer">
-    <div class="question">
-        Як мені це зробити?
-    </div>
-    <div class="answer">
-<pre class="brush: python">If not text.endswith('.'):
+        Наступним кроком для тебе буде перевірка на те, чи закінчується рядок крапкою. Ти можеш використати функцію
+        <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith()</a>
+        <pre class="brush: python">If not text.endswith('.'):
     text += '.'</pre>
 
 Цей вираз перевіряє, чи закінчується текст у змінній "text" крапкою, і якщо ні, додає крапку в кінці.
-
     </div>
 </div>
 <div class="question-answer">
