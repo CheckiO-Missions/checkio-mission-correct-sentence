@@ -1,10 +1,22 @@
-<body data-author="oduvan">
+<body data-author="Doppelok">
 <div class="question-answer">
     <div class="question">
-        How can I start here?
+        Where should I start solving this mission?
     </div>
     <div class="answer">
-        A function <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper</a></b> returns a copy of the string with all of the cased characters [4] converted to the uppercase. We need to convert only the first char, and in order to get it we should use text[0]
+        The idea of the mission is that you need to capitalize the first letter of the string. And then check if there is a period at the end of your sentence.
+         If there is, then your string can be returned as the result of the function. If there is no dot - then add it, and return what you got.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        What should I do next?
+    </div>
+    <div class="answer">
+        This string method <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper()</a></b>
+        returns a copy of the string in which all lowercase letters are converted to uppercase. We only need to convert
+        the first character and to get it we have to use text[0].
+        <pre class="brush: python">text = text[0].upper() + text[1:]</pre>
 <br />
 This can be a good start for you.
 
@@ -12,48 +24,30 @@ This can be a good start for you.
 </div>
 <div class="question-answer">
     <div class="question">
-        How can I use it?
+        I still can't solve this mission... What should I do next?
     </div>
     <div class="answer">
+        The next step for you is to check whether the string ends with a period. You can use the
+        <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith()</a> string method:
 
-        <pre class="brush: python">text = text[0].upper() + text[1:]</pre>
-
-This should work, try it out.
-
-    </div>
-</div>
-<div class="question-answer">
-    <div class="question">
-        But it still doesn’t solve the mission. What should I do next?
-    </div>
-    <div class="answer">
-        The next step for you is to check if the given string ends with a dot. You can use a function <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith</a>
-    </div>
-</div>
-<div class="question-answer">
-    <div class="question">
-        How can I do it?
-    </div>
-    <div class="answer">
-<pre class="brush: python">If not text.endswith('.'):
+        <pre class="brush: python">If not text.endswith('.'):
     text += '.'</pre>
 
-This expression checks whether the text in a variable text ends with a dot, and if it doesn’t then add a dot at the end.
-        
+This expression checks whether the text in the "text" variable ends with a period, and if not, adds a period to the end.
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Can you help me to put it all together in one solution?
+        Help me put it all together in one solution!
     </div>
     <div class="answer">
-        Do not forget that your goal on CheckiO is to create a function.
+        Don't forget that your goal at CheckiO is to create a function.
 
 <pre class="brush: python">def correct_sentence(text: str) -> str:
     text = text[0].upper() + text[1:]
     if not text.endswith('.'):
         text += '.'
-    
+
     return text</pre>
 
 
