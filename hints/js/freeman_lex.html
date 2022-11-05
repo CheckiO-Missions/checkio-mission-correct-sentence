@@ -1,0 +1,111 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <i>I have no idea how to start solving this mission.</i>
+    </div>
+    <div class="answer">
+        <p>
+            💡 The idea is simple: to make first letter uppercase, add all other text unchanged and add dot at the end, if necessary.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Ok, what should I start from?</i>
+    </div>
+    <div class="answer">
+        <p>
+            Actually, you don't need to check, if the first letter is already uppercase. Just take it using indexing and make uppercase with <a target="_blank" href="https://www.w3schools.com/jsref/jsref_touppercase.asp">string.toUpperCase()</a> method.
+        </p>
+        <pre class="brush: javascript">
+text[0].toUpperCase()
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            Clear. What to do next?
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            The rest of the <b class="code">text</b> remains unchanged, so make a slice from the second letter (remember about 0-based indexing), using <a target="_blank" href="https://www.w3schools.com/jsref/jsref_slice_string.asp">string.slice()</a> method.
+        </p>
+        <pre class="brush: javascript">
+text.slice(1)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            How to make correct ending of the string?
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            Let's think. If the string ends with dot already, you should not do anything. If not - add dot. So, how to program such behavior? I offer you to use ternary operator to check if the last character in the string is "." and make respective addition. You also need <a target="_blank" href="https://www.w3schools.com/jsref/jsref_length_string.asp">string.length</a> property.
+        </p>
+        <pre class="brush: javascript">
+text[text.length - 1] == "." ? "" : "."
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>So, how my final solution should look like?</i>
+    </div>
+    <div class="answer">
+        <p>
+            You just need to wrap your code into function expression, add all strings you've got together and return the final joined string.
+        </p>
+        <p>Here is the whole solution:</p>
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+
+    return text[0].toUpperCase() + text.slice(1) + (text[text.length-1]=="."?"":".");
+}
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Show me more solutions!<br />
+        'Cause I wanna be a real 🥇 Javascript Hero!</i>
+    </div>
+    <div class="answer">
+        <p>Sure, grab it!</p>
+        <p>
+            Use regular expressions to replace the first character with uppercase version, replace the last dot character with empty string (if there is no dot at the end, it does nothing) and add dot at the end.
+        </p>
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+    
+    return text
+        .replace(/^./, x => x.toUpperCase())
+        .replace(/\.$/, '')
+        + '.';
+}
+        </pre>
+        <p>
+            This solution does the same as ours, but using <b class="code">concat()</b> and <b class="code">endsWith()</b> functions. 
+        </p>
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+
+    return text[0].toUpperCase().concat(text.slice(1), text.endsWith(".") ? "" : ".")
+}
+        </pre>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Thanks! I know and understand more now! Everything works fine!</i>
+    </div>
+    <div class="answer">
+        👍 Glad to hear it!
+    </div>
+</div>
+</body>
