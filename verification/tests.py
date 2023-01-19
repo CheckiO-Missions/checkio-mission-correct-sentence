@@ -25,7 +25,7 @@ TESTS = {
         {
             "input": ["greetings, friends."],
             "answer": "Greetings, friends."
-        }
+        },
     ],
     "Extra": [
         {
@@ -35,6 +35,6 @@ TESTS = {
         {
             "input": ["welcome to New York"],
             "answer": "Welcome to New York."
-        }
+        },
     ]
 }

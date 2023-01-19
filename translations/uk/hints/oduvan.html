@@ -1,57 +1,72 @@
 <body data-author="Doppelok">
 <div class="question-answer">
     <div class="question">
-        З чого мені розпочати вирішувати цю місію?
+        <p>
+            З чого мені розпочати вирішувати цю місію?
+        </p>
     </div>
     <div class="answer">
-        Ідея місії в тому, що тобі потрібно зробити першу літеру рядку великою. А далі перевірити чи в кінці твого речення є крапка.
-        Якщо є, то твій рядок можна повертати як результат функції. Якщо крапки немає - тоді додай її, та поверни те що в тебе вийшло.
+        <p>
+            Ідея місії в тому, що тобі потрібно зробити першу літеру рядку великою. А далі перевірити чи в кінці твого речення є крапка. Якщо є, то твій рядок можна повертати як результат функції. Якщо крапки немає - тоді додай її, та поверни те що в тебе вийшло.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Що мені робити далі?
+        <p>
+            Що мені робити далі?
+        </p>
     </div>
     <div class="answer">
-        цей метод <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper()</a></b>
-        повертає копію рядка в якому всі літери нижнього регістру переведенні у верхній регістр. Нам потрібно
-        перетворити лише перший символ, і щоб отримати його, ми повинні використовувати text[0].
-        <pre class="brush: python">text = text[0].upper() + text[1:]</pre>
-<br />
-Це може бути хорошим початком для тебе.
-
+        <p>
+            Цей метод <b style="text-decoration: underline;"><a target="_blank" href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper()</a></b> повертає копію рядка в якому всі літери нижнього регістру переведенні у верхній регістр. Нам потрібно перетворити лише перший символ, і щоб отримати його, ми повинні використовувати <b class="code">text[0]</b>.
+        </p>
+        <pre class="brush: python">
+text = text[0].upper() + text[1:]
+        </pre>
+        <p>
+            Це може бути хорошим початком для тебе.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Я все ще не можу вирішити цю місію... Що мені протрібно зробити далі?
+        <p>
+            Я все ще не можу вирішити цю місію... Що мені потрібно зробити далі?
+        </p>
     </div>
     <div class="answer">
-        Наступним кроком для тебе буде перевірка на те, чи закінчується рядок крапкою. Ти можеш використати рядковий метод
-        <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith()</a></b>
-        <pre class="brush: python">If not text.endswith('.'):
-    text += '.'</pre>
-
-Цей вираз перевіряє, чи закінчується текст у змінній "text" крапкою, і якщо ні, додає крапку в кінці.
+        <p>
+            Наступним кроком для тебе буде перевірка на те, чи закінчується рядок крапкою. Ти можеш використати рядковий метод <b style="text-decoration: underline;"><a target="_blank" href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith()</a></b>
+        </p>
+        <pre class="brush: python">
+If not text.endswith('.'):
+    text += '.'
+        </pre>
+        <p>
+            Цей вираз перевіряє, чи закінчується текст у змінній <b class="code">text</b> крапкою, і якщо ні, додає крапку в кінці.    
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Допоможи мені об'єднати це все в одне рішення!
+        <p>
+            Допоможи мені об'єднати це все в одне рішення!
+        </p>
     </div>
     <div class="answer">
-        Не забувай, що твоя мета на CheckiO — створити функцію.
+        <p>
+            Не забувай, що твоя мета на CheckiO — створити функцію.
+        </p>
+        <pre class="brush: python">
+def correct_sentence(text: str) -> str:
 
-<pre class="brush: python">def correct_sentence(text: str) -> str:
     text = text[0].upper() + text[1:]
     if not text.endswith('.'):
         text += '.'
 
-    return text</pre>
-
-
+    return text
+        </pre>
     </div>
 </div>
-
-
 </body>

@@ -1,56 +1,73 @@
 <body data-author="Doppelok">
 <div class="question-answer">
     <div class="question">
-        Where should I start solving this mission?
+        <p>
+            Where should I start solving this mission?
+        </p>
     </div>
     <div class="answer">
-        The idea of the mission is that you need to capitalize the first letter of the string. And then check if there is a period at the end of your sentence.
-         If there is, then your string can be returned as the result of the function. If there is no dot - then add it, and return what you got.
+        <p>
+            The idea of the mission is that you need to capitalize the first letter of the string. And then check if there is a period at the end of your sentence. If there is, then your string can be returned as the result of the function. If there is no dot - then add it, and return what you got.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        What should I do next?
+        <p>
+            What should I do next?
+        </p>
     </div>
     <div class="answer">
-        This string method <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper()</a></b>
-        returns a copy of the string in which all lowercase letters are converted to uppercase. We only need to convert
-        the first character and to get it we have to use text[0].
-        <pre class="brush: python">text = text[0].upper() + text[1:]</pre>
-<br />
-This can be a good start for you.
-
+        <p>
+            This string method <b style="text-decoration: underline;"><a target="_blank"
+            href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper()</a></b> returns a copy of the string in which all lowercase letters are converted to uppercase. We only need to convert the first character and to get it we have to use <b class="code">text[0]</b>.
+        </p>
+        <pre class="brush: python">
+            text = text[0].upper() + text[1:]
+        </pre>
+        <p>
+            This may be a good start for you.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        I still can't solve this mission... What should I do next?
+        <p>
+            I still can't solve this mission... What should I do next?
+        </p>
     </div>
     <div class="answer">
-        The next step for you is to check whether the string ends with a period. You can use the
-        <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith()</a></b> string method:
-
-        <pre class="brush: python">If not text.endswith('.'):
-    text += '.'</pre>
-
-This expression checks whether the text in the "text" variable ends with a period, and if not, adds a period to the end.
+        <p>
+            The next step for you is to check whether the string ends with a period. You can use the <b style="text-decoration: underline;"><a target="_blank" href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith()</a></b> string method:
+        </p>
+        <pre class="brush: python">
+If not text.endswith('.'):
+    text += '.'
+        </pre>
+        <p>
+            This expression checks whether the text in the <b class="code">text</b> variable ends with a period, and if not, adds a period to the end.  
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Help me put it all together in one solution!
+        <p>
+            Help me put it all together in one solution!
+        </p>
     </div>
     <div class="answer">
-        Don't forget that your goal at CheckiO is to create a function.
+        <p>
+            Don't forget that your goal at CheckiO is to create a function.
+        </p>
+        <pre class="brush: python">
+def correct_sentence(text: str) -> str:
 
-<pre class="brush: python">def correct_sentence(text: str) -> str:
     text = text[0].upper() + text[1:]
     if not text.endswith('.'):
         text += '.'
 
-    return text</pre>
-
-
+    return text
+        </pre>
     </div>
 </div>
 
