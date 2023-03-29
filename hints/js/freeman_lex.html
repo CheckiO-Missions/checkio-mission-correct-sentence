@@ -61,12 +61,14 @@ text[text.length - 1] == "." ? "" : "."
             You just need to wrap your code into function expression, add all strings you've got together and return the final joined string.
         </p>
         <p>Here is the whole solution:</p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function correctSentence(text: string): string {
 
     return text[0].toUpperCase() + text.slice(1) + (text[text.length-1]=="."?"":".");
 }
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -79,6 +81,7 @@ function correctSentence(text: string): string {
         <p>
             Use regular expressions to replace the first character with uppercase version, replace the last dot character with empty string (if there is no dot at the end, it does nothing) and add dot at the end.
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function correctSentence(text: string): string {
     
@@ -88,15 +91,18 @@ function correctSentence(text: string): string {
         + '.';
 }
         </pre>
+        </div>
         <p>
             This solution does the same as ours, but using <b class="code">concat()</b> and <b class="code">endsWith()</b> functions. 
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function correctSentence(text: string): string {
 
     return text[0].toUpperCase().concat(text.slice(1), text.endsWith(".") ? "" : ".")
 }
         </pre>
+        </div>
         <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
     </div>
 </div>
