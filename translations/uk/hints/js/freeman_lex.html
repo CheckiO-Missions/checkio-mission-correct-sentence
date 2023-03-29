@@ -61,12 +61,14 @@ text[text.length - 1] == "." ? "" : "."
             Тобі лише потрібно обгорнути свій код у вираз функції, додати всі створені рядки разом і повернути цей остаточний об'єднаний рядок.
         </p>
         <p>Here is the whole solution:</p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function correctSentence(text: string): string {
 
     return text[0].toUpperCase() + text.slice(1) + (text[text.length-1]=="."?"":".");
 }
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -79,6 +81,7 @@ function correctSentence(text: string): string {
         <p>
             Використай регулярні вирази для заміни першого символа версією у верхньому регістрі, заміни останнього символа крапки порожнім рядком (якщо в кінці немає крапки, нічого не відбудеться), та додай крапку в кінці.
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function correctSentence(text: string): string {
     
@@ -88,15 +91,18 @@ function correctSentence(text: string): string {
         + '.';
 }
         </pre>
+        </div>
         <p>
             Цей розв'язок робить те ж, що і наш, але використовуючи функції <b class="code">concat()</b> and <b class="code">endsWith()</b>. 
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function correctSentence(text: string): string {
 
     return text[0].toUpperCase().concat(text.slice(1), text.endsWith(".") ? "" : ".")
 }
         </pre>
+        </div>
         <p><b>Тисни "Best solutions" в меню місії і побачиш багато інших цікавих розв'язків!</b></p>
     </div>
 </div>
