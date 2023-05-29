@@ -1,0 +1,117 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Je n'ai aucune idée de la manière de commencer à résoudre cette mission.</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 L'idée est simple: mettre la première lettre en majuscule, ajouter tout le reste du texte inchangé et ajouter un point à la fin, si nécessaire.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, par quoi dois-je commencer?</p>
+    </div>
+    <div class="answer">
+        <p>
+            En fait, vous n'avez pas besoin de vérifier si la première lettre est déjà en majuscule. Prenez-la simplement en utilisant l'indexation et mettez-la en majuscule avec la méthode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_touppercase.asp">string.toUpperCase()</a>.
+        </p>
+        <pre class="brush: javascript">
+text[0].toUpperCase()
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            C'est clair. Que faire ensuite?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Le reste de <b class="code">text</b> reste inchangé, alors faites une tranche à partir de la deuxième lettre (n'oubliez pas l'indexation basée sur 0), en utilisant la méthode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_slice_string.asp">string.slice()</a>.
+        </p>
+        <pre class="brush: javascript">
+text.slice(1)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Comment terminer correctement la chaîne de caractères?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Réfléchissons. Si la chaîne se termine déjà par un point, vous ne devez rien faire. Sinon, ajoutez un point. Alors, comment programmer un tel comportement? Je vous propose d'utiliser l'opérateur ternaire pour vérifier si le dernier caractère de la chaîne est "." et effectuer l'ajout correspondant. Vous avez également besoin de la propriété <a target="_blank" href="https://www.w3schools.com/jsref/jsref_length_string.asp">string.length</a>.
+        </p>
+        <pre class="brush: javascript">
+text[text.length - 1] == "."? "": "."
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Alors, à quoi devrait ressembler ma solution finale?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Il vous suffit d'intégrer votre code dans une expression de fonction, d'additionner toutes les chaînes que vous avez obtenues et de renvoyer la chaîne fusionnée finale.
+        </p>
+        <p>Voici la solution complète:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+
+    return text[0].toUpperCase() + text.slice(1) + (text[text.length-1]=="."?"":".");
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Montrez-moi d'autres solutions!<br />
+        parce que je veux être un vrai 🥇 Javascript Hero!</p>
+    </div>
+    <div class="answer">
+        <p>Bien sûr, prenez-le!</p>
+        <p>
+            Utilisez des expressions régulières pour remplacer le premier caractère par une version majuscule, remplacer le dernier caractère point par une chaîne vide (s'il n'y a pas de point à la fin, cela ne fait rien) et ajouter un point à la fin.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+    
+    return text
+        .replace(/^./, x => x.toUpperCase())
+        .replace(/\.$/, '')
+        + '.';
+}
+        </pre>
+        </div>
+        <p>
+            Cette solution fait la même chose que la nôtre, mais en utilisant les fonctions <b class="code">concat()</b> et <b class="code">endsWith()</b>. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+
+    return text[0].toUpperCase().concat(text.slice(1), text.endsWith(".")? "": ".")
+}
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Merci beaucoup! Je comprends mieux maintenant! Tout fonctionne bien!</p>
+    </div>
+    <div class="answer">
+        👍 Heureux de l'apprendre!
+    </div>
+</div>
+</body>
