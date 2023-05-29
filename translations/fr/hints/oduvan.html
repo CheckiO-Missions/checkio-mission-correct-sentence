@@ -1,0 +1,77 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Par où commencer pour résoudre cette mission?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            L'idée de la mission est que vous devez mettre une majuscule à la première lettre de la chaîne. Ensuite, vous devez vérifier s'il y a un point à la fin de votre phrase. Si c'est le cas, votre chaîne peut être retournée en tant que résultat de la fonction. S'il n'y a pas de point, ajoutez-le et renvoyez ce que vous avez obtenu.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Que dois-je faire ensuite?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Cette méthode string <b style="text-decoration: underline;"><a target="_blank"
+            href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper()</a></b> renvoie une copie de la chaîne dans laquelle toutes les lettres minuscules sont converties en majuscules. Nous n'avons besoin de convertir que le premier caractère et pour l'obtenir, nous devons utiliser <b class="code">text[0]</b>.
+        </p>
+        <pre class="brush: python">
+            text = text[0].upper() + text[1:]
+        </pre>
+        <p>
+            Ceci peut être un bon début pour vous.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je n'arrive toujours pas à résoudre cette mission... Que dois-je faire maintenant?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            La prochaine étape consiste à vérifier si la chaîne de caractères se termine par un point. Vous pouvez utiliser la méthode <b style="text-decoration: underline;"><a target="_blank" href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith()</a></b> méthode string:
+        </p>
+        <pre class="brush: python">
+If not text.endswith('.'):
+    text += '.'
+        </pre>
+        <p>
+            Cette expression vérifie si le texte de la variable <b class="code">text</b> se termine par un point et, si ce n'est pas le cas, ajoute un point à la fin.  
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Aidez-moi à rassembler le tout en une seule solution!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            N'oubliez pas que votre objectif chez CheckiO est de créer une fonction.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def correct_sentence(text: str) -> str:
+
+    text = text[0].upper() + text[1:]
+    if not text.endswith('.'):
+        text += '.'
+
+    return text
+        </pre>
+        </div>
+    </div>
+</div>
+
+
+</body>
