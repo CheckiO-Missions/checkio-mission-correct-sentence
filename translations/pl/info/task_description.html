@@ -1,27 +1,25 @@
 <!-- Describe task in general -->
 
 <p>
-    Na wejściu Twojej funkcji otrzymasz jedno zdanie. Musisz zwrócić jego poprawną wersję, która rozpoczyna się wielką
-    literą i kończy kropką.
+    W celu wprowadzenia funkcji otrzymają Państwo jedno zdanie. Proszę zwrócić poprawioną wersję, która zaczyna się wielką literą i kończy kropką. 
 </p>
 
-<p><i>Zwróć uwagę na fakt, że nie wszystkie poprawki są konieczne. Jeśli zdanie kończy się już kropką to dodanie
-        kolejnej będzie traktowane jako błąd.</i></p>
+<p><i>Proszę zwrócić uwagę, że nie wszystkie poprawki są konieczne. Jeśli zdanie już kończy się kropką, to dodanie kolejnej będzie błędem.</i></p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Wejście: </strong> string.
+   <strong>Dane wejściowe:</strong> Ciąg znaków <span>(str{% if is_js %}ing{% endif %})</span>.
 </p>
 
 <p>
-    <strong>Wyjście: </strong> string.
+   <strong>Wyjście:</strong> Ciąg znaków <span>(str{% if is_js %}ing{% endif %})</span>.
 </p>
 
 
 <!-- Put some usage examples -->
 <div class="for_info_only">
     <p>
-        <strong>Przykład:</strong>
+        <strong>Przykłady:</strong>
     </p>
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
@@ -29,5 +27,5 @@
 <!-- Here you can explain how it can be used in development and what is usage of this. -->
 <p>
     <strong>Warunek wstępny:</strong>
-    <i>Brak początkowych i końcowych spacji, tekst zawiera tlko spacje, litery a-z A-Z oraz kropkę.</i>
+    <i>Brak początkowych i końcowych spacji, tekst zawiera tylko spacje, a-z, A-Z, "," i ".".</i>
 </p>
