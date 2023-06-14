@@ -1,0 +1,117 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Nie mam pojęcia, jak zacząć rozwiązywać tę misję.</p>
+    </div>
+    <div class="answer">
+        <p>
+            pomysł jest prosty: pierwsza litera wielka, reszta tekstu bez zmian i ewentualnie kropka na końcu.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, od czego powinienem zacząć?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Właściwie nie trzeba sprawdzać, czy pierwsza litera jest już wielka. Proszę po prostu wziąć ją za pomocą indeksowania i zmienić na wielką za pomocą metody <a target="_blank" href="https://www.w3schools.com/jsref/jsref_touppercase.asp">string.toUpperCase()</a>.
+        </p>
+        <pre class="brush: javascript">
+text[0].toUpperCase()
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jasne. Co robić dalej?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Pozostała część <b class="code">text</b> pozostaje bez zmian, więc proszę utworzyć wycinek od drugiej litery (proszę pamiętać o indeksowaniu od 0), używając metody <a target="_blank" href="https://www.w3schools.com/jsref/jsref_slice_string.asp">string.slice()</a>.
+        </p>
+        <pre class="brush: javascript">
+text.slice(1)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak poprawnie zakończyć ciąg znaków?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę się zastanowić. Jeśli ciąg kończy się już kropką, nie należy nic robić. Jeśli nie - proszę dodać kropkę. Jak więc zaprogramować takie zachowanie? Proponuję użyć operatora trójargumentowego, aby sprawdzić, czy ostatnim znakiem w ciągu jest "." i wykonać odpowiednie dodanie. Potrzebują Państwo również właściwości <a target="_blank" href="https://www.w3schools.com/jsref/jsref_length_string.asp">string.length</a>.
+        </p>
+        <pre class="brush: javascript">
+text[text.length - 1] == "."? "": "."
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Jak więc powinno wyglądać moje ostateczne rozwiązanie?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Wystarczy zawinąć kod w wyrażenie funkcyjne, dodać wszystkie ciągi znaków i zwrócić końcowy połączony ciąg.
+        </p>
+        <p>Oto całe rozwiązanie:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+
+    return text[0].toUpperCase() + text.slice(1) + (text[text.length-1]=="."?"":".");
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Proszę pokazać mi więcej rozwiązań!<br />
+        bo chcę być prawdziwym 🥇 bohaterem Javascriptu!</p>
+    </div>
+    <div class="answer">
+        <p>Jasne, proszę pobrać!</p>
+        <p>
+            Proszę użyć wyrażeń regularnych, aby zastąpić pierwszy znak wersalikami, zastąpić ostatni znak kropki pustym ciągiem (jeśli nie ma kropki na końcu, to nic nie robi) i dodać kropkę na końcu.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+    
+    return text
+        .replace(/^./, x => x.toUpperCase())
+        .replace(/\.$/, '')
+        + '.';
+}
+        </pre>
+        </div>
+        <p>
+            To rozwiązanie robi to samo co nasze, ale używa funkcji <b class="code">concat()</b> i <b class="code">endsWith()</b>. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+
+    return text[0].toUpperCase().concat(text.slice(1), text.endsWith(".")? "": ".")
+}
+        </pre>
+        </div>
+        <p>Proszę kliknąć <b>Best Solutions</b> w menu misji i zobaczyć wiele innych ciekawych rozwiązań!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa dobrze!</p>
+    </div>
+    <div class="answer">
+        miło mi to słyszeć!
+    </div>
+</div>
+</body>
