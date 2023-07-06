@@ -1,0 +1,117 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>我不知道如何开始解决这个任务。</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡想法很简单：把第一个字母变成大写，其他文字不变，必要时在末尾加点。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>好吧，我应该从什么开始？</p>
+    </div>
+    <div class="answer">
+        <p>
+            实际上，你不需要检查第一个字母是否已经是大写字母。只需使用索引，并使用<a target="_blank" href="https://www.w3schools.com/jsref/jsref_touppercase.asp">string.toUpperCase()</a> 方法将其变为大写。
+        </p>
+        <pre class="brush: javascript">
+text[0].toUpperCase()
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            清楚了。接下来该怎么做？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            <b class="code">text</b> 的其余部分保持不变，所以从第二个字母开始做一个切片（记住关于基于0的索引），使用<a target="_blank" href="https://www.w3schools.com/jsref/jsref_slice_string.asp">string.slice()</a> 方法。
+        </p>
+        <pre class="brush: javascript">
+text.slice(1)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            如何使字符串的结尾正确？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            让我们想想。如果字符串已经以点结束，你不应该做任何事情。如果没有--添加点。那么，如何对这种行为进行编程呢？我建议你使用三元运算符来检查字符串中的最后一个字符是否是"."，并进行相应的添加。你还需要<a target="_blank" href="https://www.w3schools.com/jsref/jsref_length_string.asp">string.length</a> 属性。
+        </p>
+        <pre class="brush: javascript">
+text[text.length - 1] == "."? "": "."
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>那么，我的最终解决方案应该是什么样子的呢？</p>
+    </div>
+    <div class="answer">
+        <p>
+            你只需要把你的代码包装成函数表达式，把你得到的所有字符串加在一起，然后返回最后的连接字符串。
+        </p>
+        <p>下面是整个解决方案：</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+
+    return text[0].toUpperCase() + text.slice(1) + (text[text.length-1]=="."?"":".");
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>告诉我更多的解决方案!<br />
+        因为我想成为一个真正的🥇 Javascript英雄!</p>
+    </div>
+    <div class="answer">
+        <p>当然，抓住它!</p>
+        <p>
+            使用正则表达式将第一个字符替换为大写版本，将最后一个点字符替换为空字符串（如果末尾没有点，则不做任何处理），并在末尾添加点。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+    
+    return text
+        .replace(/^./, x => x.toUpperCase())
+        .replace(/\.$/, '')
+        + '.';
+}
+        </pre>
+        </div>
+        <p>
+            这个解决方案与我们的相同，但使用<b class="code">concat()</b> 和<b class="code">endsWith()</b> 函数。 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+
+    return text[0].toUpperCase().concat(text.slice(1), text.endsWith(".")? "": ".")
+}
+        </pre>
+        </div>
+        <p>点击任务菜单中的<b>Best Solutions</b> ，可以看到很多其他有趣的解决方案!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>谢谢!我现在知道并理解了更多!一切运作正常!</p>
+    </div>
+    <div class="answer">
+        👍很高兴听到这个消息!
+    </div>
+</div>
+</body>

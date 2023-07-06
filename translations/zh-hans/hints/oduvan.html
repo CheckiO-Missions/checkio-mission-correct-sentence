@@ -1,0 +1,77 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我应该从哪里开始解决这个任务？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            这个任务的思路是，你需要将字符串的第一个字母大写。然后检查你的句子末尾是否有句号。如果有，那么你的字符串就可以作为函数的结果返回。如果没有句号--那么就加上它，然后返回你得到的结果。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            接下来我应该做什么？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            这个字符串方法 <b style="text-decoration: underline;"><a target="_blank"
+            href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper()</a></b>返回一个字符串的副本，其中所有小写字母都被转换为大写。我们只需要转换第一个字符，为了得到它，我们必须使用<b class="code">text[0]</b> 。
+        </p>
+        <pre class="brush: python">
+            text = text[0].upper() + text[1:]
+        </pre>
+        <p>
+            这对你来说可能是一个好的开始。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我还是不能解决这个任务......接下来我应该怎么做？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            你的下一步是检查该字符串是否以句号结束。你可以使用 <b style="text-decoration: underline;"><a target="_blank" href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith()</a></b>字符串方法：
+        </p>
+        <pre class="brush: python">
+If not text.endswith('.'):
+    text += '.'
+        </pre>
+        <p>
+            这个表达式检查<b class="code">text</b> 变量中的文本是否以句号结尾，如果不是，就在结尾处加一个句号。  
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            请帮助我把它放在一个解决方案中!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            不要忘记，你在CheckiO的目标是创建一个功能。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def correct_sentence(text: str) -> str:
+
+    text = text[0].upper() + text[1:]
+    if not text.endswith('.'):
+        text += '.'
+
+    return text
+        </pre>
+        </div>
+    </div>
+</div>
+
+
+</body>
