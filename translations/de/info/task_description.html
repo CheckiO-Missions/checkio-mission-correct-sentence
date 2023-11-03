@@ -1,0 +1,31 @@
+<!-- Describe task in general -->
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p>
+    Als Eingabe für Ihre Funktion wird Ihnen ein Satz vorgegeben. Sie müssen eine korrigierte Version zurückgeben, die mit einem Großbuchstaben beginnt und mit einem Punkt endet. 
+</p>
+
+<p><i>Achten Sie darauf, dass nicht alle Korrekturen notwendig sind. Wenn ein Satz bereits mit einem Punkt endet, ist das Hinzufügen eines weiteren Punktes ein Fehler.</i></p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe:</strong> Eine Zeichenkette <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> Eine Zeichenkette <span>(str{% if is_js %}ing{% endif %})</span>.
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Beispiele:</strong>
+    </p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<p>
+    <strong>Vorbedingung:</strong>
+    <i>Keine führenden und nachgestellten Leerzeichen, Text enthält nur Leerzeichen, a-z, A-Z, "," und ".".</i>
+</p>
