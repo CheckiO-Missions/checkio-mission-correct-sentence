@@ -1,0 +1,117 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Ich habe keine Ahnung, wie ich mit der Lösung dieser Aufgabe beginnen soll.</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Die Idee ist einfach: den ersten Buchstaben in Großbuchstaben umwandeln, den restlichen Text unverändert einfügen und ggf. einen Punkt am Ende hinzufügen.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, womit soll ich anfangen?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Eigentlich brauchen Sie nicht zu prüfen, ob der erste Buchstabe bereits großgeschrieben ist. Nehmen Sie ihn einfach mit Hilfe der Indizierung und machen Sie ihn mit der Methode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_touppercase.asp">string.toUpperCase()</a> zu einem Großbuchstaben.
+        </p>
+        <pre class="brush: javascript">
+text[0].toUpperCase()
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Klar. Was ist als nächstes zu tun?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Der Rest von <b class="code">text</b> bleibt unverändert, also machen Sie ein Slice ab dem zweiten Buchstaben (denken Sie an die 0-basierte Indizierung), indem Sie die Methode <a target="_blank" href="https://www.w3schools.com/jsref/jsref_slice_string.asp">string.slice()</a> verwenden.
+        </p>
+        <pre class="brush: javascript">
+text.slice(1)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Wie wird die Zeichenkette korrekt beendet?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Überlegen wir mal. Wenn die Zeichenfolge bereits mit einem Punkt endet, sollten Sie nichts tun. Wenn nicht - fügen Sie einen Punkt hinzu. Wie kann man also ein solches Verhalten programmieren? Ich schlage Ihnen vor, den ternären Operator zu verwenden, um zu prüfen, ob das letzte Zeichen in der Zeichenkette "." ist, und eine entsprechende Ergänzung vorzunehmen. Sie benötigen außerdem die Eigenschaft <a target="_blank" href="https://www.w3schools.com/jsref/jsref_length_string.asp">string.length</a>.
+        </p>
+        <pre class="brush: javascript">
+text[text.length - 1] == "."? "": "."
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Wie sollte also meine endgültige Lösung aussehen?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Sie müssen nur Ihren Code in einen Funktionsausdruck einpacken, alle Strings, die Sie haben, zusammenfügen und den endgültigen gemeinsamen String zurückgeben.
+        </p>
+        <p>Hier ist die gesamte Lösung:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+
+    return text[0].toUpperCase() + text.slice(1) + (text[text.length-1]=="."?"":".");
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Zeigen Sie mir mehr Lösungen!<br />
+        denn ich möchte ein echter 🥇 Javascript-Held sein!</p>
+    </div>
+    <div class="answer">
+        <p>Klar, schnappen Sie es sich!</p>
+        <p>
+            Verwenden Sie reguläre Ausdrücke, um das erste Zeichen durch einen Großbuchstaben zu ersetzen, den letzten Punkt durch eine leere Zeichenkette zu ersetzen (wenn kein Punkt am Ende steht, bewirkt dies nichts) und einen Punkt am Ende hinzuzufügen.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+    
+    return text
+        .replace(/^./, x => x.toUpperCase())
+        .replace(/\.$/, '')
+        + '.';
+}
+        </pre>
+        </div>
+        <p>
+            Diese Lösung macht das Gleiche wie unsere, verwendet aber die Funktionen <b class="code">concat()</b> und <b class="code">endsWith()</b>. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function correctSentence(text: string): string {
+
+    return text[0].toUpperCase().concat(text.slice(1), text.endsWith(".")? "": ".")
+}
+        </pre>
+        </div>
+        <p>Klicken Sie im Missionsmenü auf <b>Best Solutions</b> und sehen Sie sich viele andere interessante Lösungen an!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Vielen Dank! Ich weiß und verstehe jetzt mehr! Alles funktioniert einwandfrei!</p>
+    </div>
+    <div class="answer">
+        👍 Freut mich zu hören!
+    </div>
+</div>
+</body>
